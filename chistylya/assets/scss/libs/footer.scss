@@ -1,0 +1,44 @@
+.footer{
+  background-color: #f3f4f3;
+  .container{
+    .logo{
+      display: block;
+      margin: 0 auto;
+      width: 75px;
+    }
+    .nav{
+      .box{
+        h4{
+          height: 11px;
+          color: #1c2940;
+          font-size: 18px;
+          font-weight: 500;
+          font-style: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          text-align: left;
+        }
+        ul{
+          li{
+            color: #1c2940;
+            font-size: 16px;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            a{
+              color: #1c2940;
+              font-size: 16px;
+              font-weight: 400;
+              font-style: normal;
+              letter-spacing: normal;
+              line-height: normal;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
