@@ -1,0 +1,433 @@
+.formPopup{
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 3s;
+  &.active {
+    display: block;
+  }
+  .close {
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+    position: absolute;
+
+  }
+  .close-popup{
+    position: absolute;
+    right: 25px;
+    top: -4px;
+    z-index: 1;
+    cursor: pointer;
+    &:before{
+      position: absolute;
+      left: 6px;
+      top: 17px;
+      width: 2px;
+      height: 15px;
+      content: ' ';
+      transform: rotate(37deg);
+      background-color: #1c2940;
+    }
+    &:after {
+      position: absolute;
+      left: 6px;
+      width: 2px;
+      height: 15px;
+      top: 17px;
+      content: ' ';
+      transform: rotate(-37deg);
+      background-color: #1c2940;
+    }
+  }
+  .form__popup{
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    right: 0;
+    left: 50%;
+    width: 320px;
+    padding: 61px 15px 15px;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    box-shadow: 0 5px 20px rgba(91,113,175,.2);
+    .content{
+      h3{
+        color: #1c2940;
+        font-size: 20px;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: center;
+      }
+      p{
+
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 20px;
+        text-align: left;
+        letter-spacing: normal;
+        color: #1c2940;
+        margin: 10px 0 21px;
+
+      }
+      form{
+        .input_box{
+          width: 290px;
+          margin: 0 0 20px;
+          input{
+            border-radius: 10px;
+            border: 1px solid #3e3e3d;
+            color: #3e3e3d;
+            font-size: 12px;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            width: 100%;
+            padding: 14px 5px 15px 26px;
+          }
+        }
+        .btn{
+          margin: 30px auto 27px;
+          display: block;
+          padding: 22px 68px;
+          min-width: 290px;
+          text-align: center;
+          letter-spacing: 1.8px;
+        }
+        .links{
+          color: #3e3e3d;
+          font-size: 14px;
+          font-weight: 400;
+          font-style: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          text-align: center;
+          a{
+            font-size: 14px;
+            font-weight: 400;
+            color: #0bacdb;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+.confPopup{
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 3s;
+  &.active {
+    display: block;
+  }
+  .close {
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+    position: absolute;
+
+  }
+  .close-popup{
+    position: absolute;
+    right: 25px;
+    top: -4px;
+    z-index: 1;
+    cursor: pointer;
+    &:before{
+      position: absolute;
+      left: 6px;
+      top: 17px;
+      width: 2px;
+      height: 15px;
+      content: ' ';
+      transform: rotate(37deg);
+      background-color: #1c2940;
+    }
+    &:after {
+      position: absolute;
+      left: 6px;
+      width: 2px;
+      height: 15px;
+      top: 17px;
+      content: ' ';
+      transform: rotate(-37deg);
+      background-color: #1c2940;
+    }
+  }
+  .conf__popup{
+    position: absolute;
+    right: 0;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 5px 20px rgba(91, 113, 175, 0.2);
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 37px 15px 35px;
+    .content{
+      h3{
+        color: #1c2940;
+        font-size: 20px;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: center;
+      }
+      p{
+
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 20px;
+        text-align: left;
+        letter-spacing: normal;
+        color: #1c2940;
+        margin: 10px 0 21px;
+
+      }
+    }
+  }
+}
+.validPopup{
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 3s;
+  &.active {
+    display: block;
+  }
+  .close {
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+    position: absolute;
+
+  }
+  .close-popup{
+    position: absolute;
+    right: 25px;
+    top: -4px;
+    z-index: 1;
+    cursor: pointer;
+    &:before{
+      position: absolute;
+      left: 6px;
+      top: 17px;
+      width: 2px;
+      height: 15px;
+      content: ' ';
+      transform: rotate(37deg);
+      background-color: #1c2940;
+    }
+    &:after {
+      position: absolute;
+      left: 6px;
+      width: 2px;
+      height: 15px;
+      top: 17px;
+      content: ' ';
+      transform: rotate(-37deg);
+      background-color: #1c2940;
+    }
+  }
+  .valid__popup{
+    position: absolute;
+    right: 0;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 5px 20px rgba(91, 113, 175, 0.2);
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 37px 15px 35px;
+    .content{
+      h3{
+        color: #1c2940;
+        font-size: 20px;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: center;
+      }
+      p{
+
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 20px;
+        text-align: left;
+        letter-spacing: normal;
+        color: #1c2940;
+        margin: 10px 0 21px;
+
+      }
+    }
+  }
+}
+.videoPopup{
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 3s;
+  &.active {
+    display: block;
+  }
+  .close {
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+    position: absolute;
+
+  }
+  .close-popup{
+    position: absolute;
+    right: 25px;
+    top: -4px;
+    z-index: 1;
+    cursor: pointer;
+    &:before{
+      position: absolute;
+      left: 6px;
+      top: 17px;
+      width: 2px;
+      height: 15px;
+      content: ' ';
+      transform: rotate(37deg);
+      background-color: #1c2940;
+    }
+    &:after {
+      position: absolute;
+      left: 6px;
+      width: 2px;
+      height: 15px;
+      top: 17px;
+      content: ' ';
+      transform: rotate(-37deg);
+      background-color: #1c2940;
+    }
+  }
+  .video__popup{
+    position: absolute;
+    right: 0;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 600px;
+    padding: 37px 0 35px 0;
+    background-color: #fff;
+    .content{
+      background: #ffffff;
+      padding: 20px;
+      iframe{
+        width: 100%;
+      }
+    }
+
+  }
+}
+@media (min-width: 1280px){
+  .formPopup{
+    .close {
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100vh;
+      cursor: pointer;
+      position: absolute;
+
+    }
+    .form__popup{
+      width: 441px;
+      padding: 36px 53px 15px;
+      .content{
+        h3{
+          font-size: 22px;
+        }
+        p{
+          line-height: 20px;
+          margin: 8px 0 25px;
+          text-align: center;
+
+
+        }
+        form{
+          .input_box{
+            width: 335px;
+            margin: 0 0 19px;
+            input{
+              padding: 22px 5px 21px 17px;
+            }
+          }
+          .btn{
+            min-width: 335px;
+            margin: 19px auto 18px;
+            padding: 22px 70px;
+          }
+          .links{
+
+            a{
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

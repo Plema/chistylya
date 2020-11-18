@@ -1,5 +1,5 @@
 .header{
-  padding: 4px 0px 0 0px;
+  padding: 10px 0px 0 0px;
   .container{
     display: flex;
     justify-content: space-between;
@@ -39,6 +39,39 @@
             }
             p{
               display: none;
+
+            }
+            &.active{
+              span{
+
+                background-color: #1c2940;
+                i{
+                  &:before{
+                    color: #ffffff;
+
+                  }
+                }
+              }
+              p{
+                display: block;
+                position: absolute;
+                left: 0;
+                background: #1c2940;
+                color: #ffffff;
+                font-size: 19px;
+                font-weight: 500;
+                font-style: normal;
+                letter-spacing: normal;
+                z-index: 1;
+                width: 100%;
+                top: 54px;
+                padding: 9px 0 9px 0;
+                text-align: center;
+                line-height: 20px;
+                i{
+                  margin: 0 10px 0 0;
+                }
+              }
             }
           }
         }
@@ -51,8 +84,17 @@
         transform: translate(0px, 12px);
         i {
           &:before {
+            transition: 0.3s;
             color: #0bbbef;
             font-size: 15px;
+          }
+        }
+        &.active{
+          i {
+            &:before {
+              transition: 0.3s;
+              color: #1c2940;
+            }
           }
         }
       }
@@ -72,11 +114,19 @@
           visibility: visible;
           transform: scale(1);
           z-index: 5;
+          background-color: #f5f8f6;
+          padding: 15px 0 0px 0;
+          min-height: 371px;
+          height: auto;
+
         }
         ul{
           text-align: center;
+          border-top: 1px solid #e8e8e8;
+          border-bottom: 5px solid #0bacdb;
+          padding: 32px 0 5px 0;
           li{
-            margin: 0 0 10px 0;
+            margin: 0 0 15px;
             a{
               height: 11px;
               color: #1c2940;
@@ -102,7 +152,7 @@
                   background-color: #0bbbef;
                   border-radius: 50%;
                   position: absolute;
-                  left: 0;
+                  left: -5px;
                   top: 50%;
                   transform: translate(-10px, -50%);
                 }
@@ -124,16 +174,42 @@
       }
 
       nav {
+        width: 90%;
+        padding: 10px 5px 0 0px;
         .address{
           order: 2;
           display: flex;
           justify-content: flex-start;
           flex-wrap: wrap;
           flex-direction: column;
+          width: 25%;
           li{
+            margin: 0px 0px 7px 0;
             a{
-              span{
+              display: block;
+              &.active{
+                span{
+                  background-color: #ffffff;
+                  i{
+                    &:before{
+                      color: #1c2940;
+                    }
+                  }
+                }
 
+                p{
+                  position: relative;
+                  left: auto;
+                  top:auto;
+                  background: none;
+                  i{
+                    display: none;
+                  }
+                }
+              }
+              span{
+                width: 45px;
+                height: 45px;
                 i{
                   &:before{
 
@@ -141,11 +217,21 @@
                   }
                 }
               }
-              &.mail{
-                width: 210px;
+              &.tel{
+                width: 225px;
                 height: 41px;
                 border-radius: 10px;
                 background-color: #1c2940;
+                position: relative;
+                padding: 0 0 0 50px;
+                margin: 0 0 0 5px;
+                transition: 0.3s;
+                cursor: pointer;
+                span{
+                  position: absolute;
+                  left: -6px;
+                  top: -2px;
+                }
                 p{
                   display: block;
                   color: #ffffff;
@@ -155,18 +241,61 @@
                   letter-spacing: normal;
                   line-height: normal;
                   text-align: left;
+                  padding: 10px 10px 5px 8px;
+                  letter-spacing: 0.8px;
+                }
+                &:hover{
+                  background-color: #0bacdb;
+                  span{
+                    i{
+                      &:before{
+                        color:#0bacdb ;
+                      }
+                    }
+                  }
                 }
               }
-              &.tel{
+              &.mail{
+                position: relative;
+                margin: 0 0 0 5px;
+                padding: 0 0 0 11px;
+                transition: 0.3s;
+                cursor: pointer;
+                span{
+                  position: absolute;
+                  left: -6px;
+                  top: -2px;
+                }
                 p{
                   display: block;
                   color: #1c2940;
-                  font-size: 23px;
                   font-weight: 700;
                   font-style: normal;
-                  letter-spacing: normal;
                   line-height: normal;
                   text-align: left;
+                  padding: 10px 0px 5px 46px;
+                  font-size: 19px;
+                  letter-spacing: 0.3px;
+                }
+                &:hover{
+                  span{
+                    i{
+                      &:before{
+                        color:#0bacdb ;
+                      }
+                    }
+                  }
+                  p{
+                    color:#0bacdb ;
+                  }
+                }
+              }
+
+              p{
+                position: relative;
+
+                i{
+                  display: none;
                 }
               }
 
@@ -177,6 +306,8 @@
             display: none;
         }
         .menu {
+          padding: 12px 47px 0 0;
+          height: fit-content;
           position: relative;
           display: block;
           visibility: visible;
@@ -186,10 +317,12 @@
           order: 1;
           top: auto;
           right: auto;
-          height: auto;
           ul{
             display: flex;
             justify-content: space-between;
+            border-bottom: none;
+            border-top: none;
+            padding: 0;
             li{
               margin: 0 0 10px 0;
               a{
@@ -201,7 +334,7 @@
                     width: 6px;
                     height: 6px;
                     left: 50%;
-                    top: 50%;
+                    top: 25px;
                     transform: translate(-50%, -50%);
                   }
                 }

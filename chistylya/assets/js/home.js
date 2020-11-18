@@ -24,7 +24,7 @@ $(document).ready(function () {
                 breakpoint: 1024,
                 settings: {
                     centerMode:false,
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                 }
             },
@@ -66,12 +66,19 @@ $(document).ready(function () {
         dots: true,
         arrows:false,
         responsive: [
+            {
 
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                }
+            },
             {
 
                 breakpoint: 1280,
                 settings: {
-                    slidesToShow: 6,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                 }
             },
@@ -116,7 +123,7 @@ $(document).ready(function () {
     $('.slider_3').slick({
         infinite:false,
         draggable:true,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         dots: true,
         arrows:false,
@@ -126,7 +133,7 @@ $(document).ready(function () {
 
                 breakpoint: 1280,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                 }
             },
@@ -134,7 +141,7 @@ $(document).ready(function () {
 
                 breakpoint: 1024,
                 settings: {
-                    centerMode:false,
+
                     slidesToShow: 2,
                     slidesToScroll: 1,
                 }
@@ -142,7 +149,7 @@ $(document).ready(function () {
             {
                 breakpoint: 768,
                 settings: {
-                    centerMode:false,
+
                     slidesToShow: 1,
                     slidesToScroll: 1,
                 }
@@ -150,7 +157,7 @@ $(document).ready(function () {
             {
                 breakpoint: 480,
                 settings: {
-                    centerMode:false,
+
 
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -159,7 +166,7 @@ $(document).ready(function () {
             {
                 breakpoint: 320,
                 settings: {
-                    centerMode:true,
+
                     slidesToShow: 1,
                     slidesToScroll: 1,
                 }
@@ -189,7 +196,7 @@ $(document).ready(function () {
 
                 breakpoint: 1024,
                 settings: {
-                    centerMode:false,
+
                     slidesToShow: 2,
                     slidesToScroll: 1,
                 }
@@ -197,7 +204,7 @@ $(document).ready(function () {
             {
                 breakpoint: 768,
                 settings: {
-                    centerMode:false,
+
                     slidesToShow: 1,
                     slidesToScroll: 1,
                 }
@@ -205,7 +212,7 @@ $(document).ready(function () {
             {
                 breakpoint: 480,
                 settings: {
-                    centerMode:false,
+
 
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -214,7 +221,7 @@ $(document).ready(function () {
             {
                 breakpoint: 320,
                 settings: {
-                    centerMode:true,
+
                     slidesToShow: 1,
                     slidesToScroll: 1,
                 }
@@ -281,118 +288,33 @@ $(document).ready(function () {
     $('.slider_6').slick({
         infinite:false,
         draggable:true,
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,
         nextArrow: '<button class="slick-arrow next"><span></span></button>',
         prevArrow: '<button class="slick-arrow prev"><span></span></button>',
-        responsive: [
-
-            {
-
-                breakpoint: 1280,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-
-                breakpoint: 1024,
-                settings: {
-                    centerMode:false,
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    centerMode:false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    centerMode:false,
-
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 320,
-                settings: {
-                    centerMode:true,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            },
-
-        ]
 
     });
     $('.slider_7').slick({
-        infinite:false,
         draggable:true,
         slidesToShow: 3,
-        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '60px',
         dots: true,
+        variableWidth:true,
         nextArrow: '<button class="slick-arrow next"><span></span></button>',
         prevArrow: '<button class="slick-arrow prev"><span></span></button>',
-        responsive: [
-
-            {
-
-                breakpoint: 1280,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-
-                breakpoint: 1024,
-                settings: {
-                    centerMode:false,
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    centerMode:false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    centerMode:false,
-
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 320,
-                settings: {
-                    centerMode:true,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            },
-
-        ]
 
     });
     //конец слайдер
 
-
+    var highestBox = 0;
+    jQuery('.slider_1>.slide').each(function(){
+        if(jQuery(this).height() > highestBox) {
+            highestBox = jQuery(this).height(); //нахожу высоту самого высокого блока
+        }
+    });
+    jQuery('.slider_1>.slide').height(highestBox);
     //табы
     $(".tabs-button").click(function(e) {
         $("div [data-id]").removeClass("active");
@@ -406,7 +328,7 @@ $(document).ready(function () {
     });
     //конец табы
 
-  //аккордион
+    //аккордион
     $( function() {
         $( ".accordion" ) .accordion({
             header: "> div > h3"
