@@ -131,7 +131,7 @@ $(document).ready(function () {
 
             {
 
-                breakpoint: 1280,
+                breakpoint: 1400,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
@@ -295,16 +295,25 @@ $(document).ready(function () {
         prevArrow: '<button class="slick-arrow prev"><span></span></button>',
 
     });
-    $('.slider_7').slick({
-        draggable:true,
-        slidesToShow: 3,
-        centerMode: true,
-        centerPadding: '60px',
-        dots: true,
-        variableWidth:true,
-        nextArrow: '<button class="slick-arrow next"><span></span></button>',
-        prevArrow: '<button class="slick-arrow prev"><span></span></button>',
 
+    $('.section_8').each(function(){
+        var $this = $(this),
+            $blockArrows = $('.slick-arrow_group', $this),
+            $blockDots = $('.slick-arrow_group', $this),
+            $slick = $('.slider_7', $this);
+        $slick.slick({
+            draggable:true,
+            slidesToShow: 3,
+            centerMode: true,
+            centerPadding: '60px',
+            dots: true,
+            variableWidth:true,
+            nextArrow: '<button class="slick-arrow next"><span></span></button>',
+            prevArrow: '<button class="slick-arrow prev"><span></span></button>',
+            appendArrows: $blockArrows,
+            appendDots: $blockDots,
+
+        });
     });
     //конец слайдер
 

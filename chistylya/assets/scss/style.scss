@@ -264,7 +264,7 @@ button {
     .slick-dots{
         display: flex;
         justify-content: center;
-        margin: 0 10px;
+        margin: 0;
         order: 2;
         li{
             width: 10px;
@@ -312,7 +312,6 @@ button {
         cursor: pointer;
         color: #0e2440;
         padding: 0 0 0 48px;
-        width: 290px;
         letter-spacing: 0.6px;
         transition: 0.3s;
         margin: 0 auto;
@@ -470,7 +469,40 @@ a {
     position: relative;
 
 }
-
+.down{
+    display: block;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 22px 32px rgba(0, 0, 0, 0.11);
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 26px);
+    cursor: pointer;
+    transition: 0.3s;
+    bottom: 0;
+    &:hover{
+        box-shadow: 0 14px 21px rgba(28, 41, 64, 0.21);
+        background-image: linear-gradient(to top, #0bbbef 0%, #88d0fd 100%);
+        i{
+            &:before{
+                color: #ffffff;
+            }
+        }
+    }
+    i{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        &:before{
+            color: #1c2940;
+            font-size: 8px;
+            transform: rotate(90deg);
+        }
+    }
+}
 .title{
     color: #0bacdb;
     font-size: 24px;
@@ -491,7 +523,7 @@ a {
 
 }
 
-@media (min-width: 1024px) {
+@media screen and(min-width: 1024px) {
     .container {
         width: 864px;
     }
@@ -506,6 +538,34 @@ a {
         font-size: 48px;
         letter-spacing: 1.5px;
         text-align: center;
+    }
+    .slick-arrow_group{
+        .slick-dots{
+            padding: 25px 0 0;
+            li{
+                width: 16px;
+                height: 16px;
+                margin: 0 7px;
+            }
+            .slick-active{
+                width: 16px;
+                height: 16px;
+            }
+        }
+        .slick-arrow{
+            width: 62px;
+            height: 62px;
+            &.next{
+                &:before{
+                    font-size: 9px;
+                }
+            }
+            &.prev{
+                &:before{
+                    font-size: 9px;
+                }
+            }
+        }
     }
     .slick-dots{
 
